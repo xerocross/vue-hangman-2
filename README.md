@@ -10,9 +10,9 @@ More than anything else, this app is a port of an old Vue Hangman app I wrote
 back in 2019 or so, here: https://github.com/xerocross/vue-hangman.
 That app doesn't build anymore even on my own computer because of
 updates to Node and to the app's dependencies. It is therefore deprecated. 
-Here, I did not re-write the app from whole cloth. Where possible, I 
-simply moved code over and made minimal changes so that it would 
-function. It is not necessarily intended as an example of JavaScript 
+Here, I started with a fresh Vue 3 project, but I did not re-write the app from whole cloth. Where possible, I 
+simply moved code over from the old project and made minimal changes so that it would 
+function in Vue 3. It is not necessarily intended as an example of JavaScript 
 written as I would write it today (circa May 2023). The point of this is 
 simply to fix something on my portfolio that was broken.
 
