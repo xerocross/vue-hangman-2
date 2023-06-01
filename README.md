@@ -50,3 +50,7 @@ management, and Axios for AJAX. I used Axios rather than an ECMAScript
 6 shim because I did not like to use shims when I originally wrote 
 Vue Hangman and I liked Axios. I used jQuery exclusively for visual 
 effects. jQuery plays no role in application logic.
+
+## Still In Progress
+
+Moving over the testing is still in progress.
