@@ -1,3 +1,6 @@
+..gitignore.un~
+.gitignore~
+.vscode
 # Logs
 logs
 *.log
