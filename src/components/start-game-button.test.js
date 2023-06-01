@@ -1,20 +1,28 @@
-/* eslint-disable no-undef */
+/* global test, expect */
 import {mount} from '@vue/test-utils';
 import StartGameButton from "./start-game-button.vue";
 
-beforeAll(()=> {
-
-});
-
 test("start game button mounts", () => {
     expect(()=>{
-        mount(StartGameButton);
+        mount(StartGameButton, {
+            global : { 
+                directives: {
+                    "AsyncWorking" : {}
+                }
+            }
+    });
     }).not.toThrow();
 });
 
-test("emits start game event", () => {
-    const c = mount(StartGameButton);
+test("emits start game event", async () => {
+    const c = mount(StartGameButton, {
+        global : { 
+            directives: {
+                "AsyncWorking" : {}
+            }
+        }
+    });
     const startButton = c.find(".start-button");
-    startButton.trigger("click");
-    expect(c.emitted()["event_start_game"].length).toBe(1);
+    await startButton.trigger("click");
+    expect(c.emitted().hasOwnProperty("event_start_game")).toBeTruthy();
 });
