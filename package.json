@@ -1,0 +1,46 @@
+{
+  "name": "vue-hangman-2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --watchAll --verbose",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "jquery": "^3.7.0",
+    "vue": "^3.3.2",
+    "vuex": "^4.1.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.4",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/test-utils": "^2.4.0-alpha.1",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "vite": "^4.3.5",
+    "vue-jest": "^5.0.0-alpha.10"
+  }
+}
