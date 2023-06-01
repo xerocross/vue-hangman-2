@@ -1,7 +1,7 @@
 <template>
     <div class="start-game-button">
         <button
-            v-asyncWorking="working"
+            v-AsyncWorking="working"
             class="btn btn-primary start-button"
             :disabled = "working"
             @click="startGame"

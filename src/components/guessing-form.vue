@@ -25,7 +25,7 @@
                 <div class="col-6">
                     <button
                         ref="guess-letter-button"
-                        v-aync-working="guessLetterWorking"
+                        v-AsyncWorking="guessLetterWorking"
                         class="btn btn-primary guess-letter-button"
                         :disabled="currentGuessLetter == '' || working"
                         @click="guess"
@@ -45,7 +45,7 @@
                 <div class="col-6">
                     <input
                         v-model="currentGuessPhrase"
-                        v-aync-working="guessPhraseWorking"
+                        v-AsyncWorking="guessPhraseWorking"
                         name="guessPhrase"
                         :disabled="guessPhraseWorking"
                         type="text"
@@ -67,6 +67,7 @@
 </template>
 <script>
 export default {
+    name: "GuessingForm",
     props : {
         availableLetters : {
             type : Array,
