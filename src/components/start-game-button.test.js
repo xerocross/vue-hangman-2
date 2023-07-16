@@ -1,23 +1,23 @@
 /* global test, expect */
-import {mount} from '@vue/test-utils';
+import {mount} from "@vue/test-utils";
 import StartGameButton from "./start-game-button.vue";
 
 test("start game button mounts", () => {
-    expect(()=>{
+    expect(() => {
         mount(StartGameButton, {
             global : { 
-                directives: {
+                directives : {
                     "AsyncWorking" : {}
                 }
             }
-    });
+        });
     }).not.toThrow();
 });
 
 test("emits start game event", async () => {
     const c = mount(StartGameButton, {
         global : { 
-            directives: {
+            directives : {
                 "AsyncWorking" : {}
             }
         }

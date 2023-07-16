@@ -2,7 +2,7 @@
 import $ from "jquery";
 
 const AsyncWorking = {
-    update : function(el, binding) {
+    update : function (el, binding) {
         let test = binding.value && !binding.oldValue;
         if (test) {
             $("[pulse-on-busy]").addClass("letters-fade");
@@ -12,5 +12,5 @@ const AsyncWorking = {
             $("[pulse-on-busy]").removeClass("letters-fade");
         }
     }
-}
+};
 export default AsyncWorking;

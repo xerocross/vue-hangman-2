@@ -76,7 +76,7 @@ export default {
             error : false,
             guessLetterWorking : false,
             guessPhraseWorking : false
-        }
+        };
     },
     computed : {
         revealedPhrase () {
@@ -110,16 +110,16 @@ export default {
         reset () {
             this.$emit("event_reset");
         },
-        fail() {
+        fail () {
 
         },
-        guessLetter(letter) {
+        guessLetter (letter) {
             this.pushMessage(`looking for any ${letter}s`);
             this.guessLetterWorking = true;
-            this.$store.dispatch('guessLetter', {
+            this.$store.dispatch("guessLetter", {
                 letter
             })
-                .then((val)=> {
+                .then((val) => {
                     this.guessLetterWorking = false;
                     if (val == false) {
                         this.pushMessage(`letter ${letter} not found`);
@@ -127,17 +127,17 @@ export default {
                         this.pushMessage("found");
                     }
                 })
-                .catch(()=> {
+                .catch(() => {
                     this.guessLetterWorking = false;
                     this.error = true;
                 });
         },
-        guessEntirePhrase(phrase) {
+        guessEntirePhrase (phrase) {
             this.pushMessage(`checking your phrase`);
             let self = this;
             this.guessPhraseWorking = true;
-            this.$store.dispatch('guessEntirePhrase', {
-                guessPhrase : phrase,
+            this.$store.dispatch("guessEntirePhrase", {
+                guessPhrase : phrase
             })
                 .then((val) => {
                     this.guessPhraseWorking = false;
@@ -145,16 +145,16 @@ export default {
                         this.pushMessage(`phrase not correct`);
                     }
                 })
-                .catch(()=> {
+                .catch(() => {
                     this.guessPhraseWorking = false;
                     self.error = true;
                 });
         },
-        pushMessage(message) {
+        pushMessage (message) {
             this.$emit("event_push_message", message);
         }
     }
-}
+};
 </script>
 <style lang = "scss">
     .game-over {

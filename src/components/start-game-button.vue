@@ -23,7 +23,7 @@ export default {
             this.$emit("event_start_game");
         }
     }
-}
+};
 </script>
 <style lang = "scss">
 </style>

@@ -15,7 +15,7 @@ export default {
             this.$emit("event_reset");
         }
     }
-}
+};
 </script>
 <style lang="scss">
 </style>

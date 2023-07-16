@@ -67,7 +67,7 @@
 </template>
 <script>
 export default {
-    name: "GuessingForm",
+    name : "GuessingForm",
     props : {
         availableLetters : {
             type : Array,
@@ -95,7 +95,7 @@ export default {
     },
     watch : {
         availableLetters : {
-            handler(val) {
+            handler (val) {
                 this.currentGuessLetter = val[0];
             },
             deep : true
@@ -111,7 +111,7 @@ export default {
             this.currentGuessPhrase = "";
         }
     }
-}
+};
 </script>
 <style lang="scss">
 

@@ -16,7 +16,7 @@ export default {
             default : 0
         }
     }
-}
+};
 </script>
 <style lang="scss">
     .guessed-letters {

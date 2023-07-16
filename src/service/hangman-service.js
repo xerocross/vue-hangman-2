@@ -3,17 +3,16 @@ import Observable from "../Observable.js";
 
 const getPhraseNumUrl = "https://xero-hangman-api.herokuapp.com/getPhraseNum";
 
-function getCheckLetterUrl(phraseNum, letter) {
+function getCheckLetterUrl (phraseNum, letter) {
     return `https://xero-hangman-api.herokuapp.com/guessLetter?letter=${letter}&phrasenum=${phraseNum}`;
 }
-function getPhraseCheckUrl(phraseNum, guessPhrase) {
+function getPhraseCheckUrl (phraseNum, guessPhrase) {
     let encodedPhrase = encodeURI(guessPhrase);
     return `https://xero-hangman-api.herokuapp.com/guessPhrase?guessphrase=${encodedPhrase}&phrasenum=${phraseNum}`;
 }
 
 
-
-const get = function(url) {
+const get = function (url) {
     return new Observable((observer) => {
         axios.get(url)
             .then(function (response) {
@@ -21,12 +20,12 @@ const get = function(url) {
                     observer.next({
                         status : "SUCCESS",
                         data : response.data
-                    })
+                    });
                 } else {
                     observer.next({
                         status : "FAIL",
                         data : response.data
-                    })
+                    });
                 } 
 
             })
@@ -35,9 +34,9 @@ const get = function(url) {
                     status : "ERROR",
                     error : error
                 });
-            })
-    })
-}
+            });
+    });
+};
 
 export default {
     getPhraseData () {
@@ -51,6 +50,6 @@ export default {
         let url = getPhraseCheckUrl(phraseNum, guessPhrase);
         return get(url);
     }
-}
+};
 
 

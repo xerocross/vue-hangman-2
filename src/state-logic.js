@@ -2,7 +2,6 @@ import Vuex from "vuex";
 import HangmanService from "./service/hangman-service";
 
 
-
 function cloneArray (arr) {
     let newArray = [];
     for (let i = 0; i < arr.length; i++) {
@@ -44,7 +43,7 @@ export const store = new Vuex.Store({
             state.guessedLettersSet.push(payload.letter);
             let index = state.availableLetters.indexOf(payload.letter);
             let newAvailableLetters = cloneArray(state.availableLetters);
-            newAvailableLetters.splice(index,1);
+            newAvailableLetters.splice(index, 1);
 
             state.availableLetters = newAvailableLetters;
         },
@@ -74,9 +73,9 @@ export const store = new Vuex.Store({
         startGame ( { commit } ) {
             return new Promise( (resolve, fail) => {
                 HangmanService.getPhraseData()
-                    .subscribe((val)=> {
+                    .subscribe((val) => {
                         if (val.status == "SUCCESS") {
-                            commit("phraseData",{
+                            commit("phraseData", {
                                 phraseNum : val.data.phraseNum,
                                 phraseLen : val.data.length
                             });
@@ -85,23 +84,23 @@ export const store = new Vuex.Store({
                         } else {
                             fail();
                         }
-                    })
+                    });
             });     
         },
         guessLetter ({commit, state}, payload) {
-            commit("guessedLetter",{letter : payload.letter});
+            commit("guessedLetter", {letter : payload.letter});
             return new Promise( (resolve, fail) => {
                 HangmanService.guessLetter(state.phraseNum, payload.letter)
                     .subscribe((val) => {
                         if (val.status == "SUCCESS") {
                             if (val.data.success == false) {
                                 commit ("failedAttempt");
-                                resolve(false)
+                                resolve(false);
                             } else {
-                                commit("mergeNewReveal",{
+                                commit("mergeNewReveal", {
                                     revealedPhrase : val.data.revealedPhrase
                                 });
-                                resolve(true)
+                                resolve(true);
                             }
                         } else {
                             fail();
@@ -110,7 +109,7 @@ export const store = new Vuex.Store({
                     });
             });
         },
-        guessEntirePhrase({commit, state}, payload) {
+        guessEntirePhrase ({commit, state}, payload) {
             return new Promise( (resolve, fail) => {
                 HangmanService.guessEntirePhrase(state.phraseNum, payload.guessPhrase)
                     .subscribe( (val) => {
@@ -128,7 +127,7 @@ export const store = new Vuex.Store({
                         }
 
                     });
-            })
+            });
         }
     }
-})
+});

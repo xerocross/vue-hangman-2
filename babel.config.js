@@ -1,5 +1,4 @@
-
-// eslint-disable-next-line no-undef
+/* global module */
 module.exports = {
-    presets: ['@babel/preset-env'],
-}
+    presets : ["@babel/preset-env"]
+};

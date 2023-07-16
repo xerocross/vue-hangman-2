@@ -25,5 +25,5 @@ export default {
             return `${this.imageDirectory}/hangman-doodle${this.completion}.png`;
         }
     }
-}
+};
 </script>

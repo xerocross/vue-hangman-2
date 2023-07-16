@@ -1,19 +1,19 @@
 /* eslint-disable no-undef */
-import {mount} from '@vue/test-utils';
+import {mount} from "@vue/test-utils";
 import MainPhraseDisplay from "./main-phrase-display.vue";
 
-beforeEach(()=> {
+beforeEach(() => {
     localStorage.clear();
-})
+});
 
-test("main-phrase-display mounts", function() {
-    expect(()=>{
+test("main-phrase-display mounts", function () {
+    expect(() => {
         mount(MainPhraseDisplay);
     }).not.toThrow();
 });
 
 
-test("displays a phrase", function() {
+test("displays a phrase", function () {
 
     function getWord (text, index) {
         let chars = text.split("");
@@ -30,8 +30,8 @@ test("displays a phrase", function() {
 
     const displayWords = [
         getWord("ap", 0),
-        getWord("pe",1)
-    ]
+        getWord("pe", 1)
+    ];
     let mainPhraseDisplay = mount(MainPhraseDisplay, {
         propsData : {
             displayWords

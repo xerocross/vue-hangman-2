@@ -40,7 +40,7 @@ export default {
             error : false,
             isNewMessage : false,
             message : ""
-        }
+        };
     },
     computed : {
         isGameInProgress () {
@@ -54,11 +54,11 @@ export default {
         startGame () {
             let self = this;
             self.startGameWorking = true;
-            this.$store.dispatch('startGame')
-                .then(()=> {
-                    this.startGameWorking = false
+            this.$store.dispatch("startGame")
+                .then(() => {
+                    this.startGameWorking = false;
                 })
-                .catch(()=> {
+                .catch(() => {
                     this.error = true;
                 });
         },
@@ -69,12 +69,12 @@ export default {
                 this.isNewMessage = false;
             }, 1000);
         },
-        reset() {
+        reset () {
             this.startGame();
         }
     }
 
-}
+};
 </script>
 <style lang = "scss">
 .vue-hangman {

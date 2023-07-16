@@ -1,19 +1,19 @@
 /* global test, expect */
-import { shallowMount } from "@vue/test-utils"
-import GuessingForm from "./guessing-form.vue"
+import { shallowMount } from "@vue/test-utils";
+import GuessingForm from "./guessing-form.vue";
 
 test("guessing a letter emits event_guess_letter with letter payload", async () => {
     const c = shallowMount(GuessingForm,
-    {
-        propsData : {
-            availableLetters : ["A", "C"]
-        },
-        global : { 
-            directives: {
-                "AsyncWorking" : {}
+        {
+            propsData : {
+                availableLetters : ["A", "C"]
+            },
+            global : { 
+                directives : {
+                    "AsyncWorking" : {}
+                }
             }
-        }
-    });
+        });
     const letterSelect = c.find(".guess-letter-select");
     const options = letterSelect.findAll("option");
     const opt = options.filter(opt => opt.element.value == "C")[0];

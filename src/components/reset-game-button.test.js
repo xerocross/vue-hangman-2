@@ -1,14 +1,14 @@
 /* global test, expect */
-import {mount, shallowMount} from '@vue/test-utils';
+import {mount, shallowMount} from "@vue/test-utils";
 import ResetGameButton from "./reset-game-button.vue";
 
-function getComponent() {
+function getComponent () {
     return shallowMount((ResetGameButton));
 }
 
 
 test("reset-game-button mounts", () => {
-    expect(()=>{
+    expect(() => {
         mount(ResetGameButton);
     }).not.toThrow();
 });
