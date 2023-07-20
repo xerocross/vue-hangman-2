@@ -1,5 +1,5 @@
 import MainPhraseDisplay from "./MainPhraseDisplay";
-import ResetGameButton from "./reset-game-button.vue";
+import ResetGameButton from "./ResetGameButton";
 import GuessedLetters from "./guessed-letters.vue";
 import GuessingForm from "./guessing-form.vue";
 import HangmanDoodle from "./hangman-doodle.vue";
