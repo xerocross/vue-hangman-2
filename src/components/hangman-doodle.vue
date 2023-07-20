@@ -8,22 +8,4 @@
         >
     </div>
 </template>
-<script>
-export default {
-    props : {
-        imageDirectory : {
-            type : String,
-            required : true
-        },
-        completion : {
-            type : Number,
-            required : true
-        }
-    },
-    computed : {
-        imageSrc () {
-            return `${this.imageDirectory}/hangman-doodle${this.completion}.png`;
-        }
-    }
-};
-</script>
+<script lang = "ts" src = "./hangman-doodle.vue"></script>
