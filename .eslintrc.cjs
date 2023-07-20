@@ -40,6 +40,7 @@ module.exports = {
         "jest/no-conditional-expect" : "off",
         "comma-spacing" : ["error", { "after" : true }],
         "no-multiple-empty-lines" : ["error", { "max" : 2 }],
-        "@typescript-eslint/no-explicit-any" : "off"
+        "@typescript-eslint/no-explicit-any" : "off",
+        "object-curly-spacing" : ["error", "always"]
     }
 };
