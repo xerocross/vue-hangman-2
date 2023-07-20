@@ -33,6 +33,7 @@ function getWord (text : string, index : number) : Word {
 }
 
 export default {
+    name : "game-in-progress",
     components : {
         MainPhraseDisplay,
         ResetGameButton,
