@@ -22,8 +22,8 @@
     </div>
 </template>
 <script>
-import GameInProgress from "./components/game-in-progress.vue";
-import GameMessage from "./components/game-message.vue";
+import GameInProgress from "./components/GameInProgress.vue";
+import GameMessage from "./components/GameMessage.vue";
 import StartGameButton from "./components/start-game-button.vue";
 export default {
     components : {
