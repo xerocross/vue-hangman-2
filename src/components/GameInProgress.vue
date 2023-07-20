@@ -40,7 +40,7 @@
     </div>
 </template>
 
-<script lang = "ts" src = "./game-in-progress.ts"></script>
+<script lang = "ts" src = "./GameInProgress.ts"></script>
 <style lang = "scss">
     .game-over {
         text-align: center;
