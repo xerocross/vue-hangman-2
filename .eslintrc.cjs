@@ -39,6 +39,7 @@ module.exports = {
         "jest/no-done-callback" : "off",
         "jest/no-conditional-expect" : "off",
         "comma-spacing" : ["error", { "after" : true }],
+        "no-multiple-empty-lines" : ["error", { "max" : 2 }],
         "@typescript-eslint/no-explicit-any" : "off"
     }
 };
