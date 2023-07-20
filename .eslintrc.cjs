@@ -4,12 +4,15 @@ require("@rushstack/eslint-patch/modern-module-resolution");
 module.exports = {
     root : true,
     extends : [
+        "plugin:@typescript-eslint/recommended",
         "plugin:vue/vue3-essential",
         "@vue/eslint-config-prettier/skip-formatting"
     ],
+    parser : "vue-eslint-parser",
     parserOptions : {
-        ecmaVersion : "latest"
+        parser : "@typescript-eslint/parser"
     },
+    plugins : ["@typescript-eslint", "vue"],
     "rules" : {
         "vue/prop-name-casing" : 1,
         "no-debugger" : process.env.NODE_ENV === "production" ? 2 : 0,
@@ -36,6 +39,6 @@ module.exports = {
         "jest/no-done-callback" : "off",
         "jest/no-conditional-expect" : "off",
         "comma-spacing" : ["error", { "after" : true }],
-        "no-multiple-empty-lines" : ["error", { "max" : 2 }]
+        "@typescript-eslint/no-explicit-any" : "off"
     }
 };
