@@ -6,24 +6,14 @@
             class="main-phrase-display-inner word"
         >
             <span
-                v-for="charItem in word"
+                v-for="charItem in word.chars"
                 :key="charItem.index"
                 class="letter-char"
-            >{{ charItem.char }}
+            >{{ charItem.charString }}
             </span>
         </div>
     </div>
 </template>
-<script>
-export default {
-    props : {
-        displayWords : {
-            type : Array,
-            default : () => []
-        }
-    }
-};
-</script>
 <style lang="scss">
     .main-phrase-display {
         .main-phrase-display-inner {
