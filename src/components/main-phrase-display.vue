@@ -14,6 +14,7 @@
         </div>
     </div>
 </template>
+<script lang = "ts" src = "./MainPhraseDisplay.ts"></script>
 <style lang="scss">
     .main-phrase-display {
         .main-phrase-display-inner {
@@ -26,8 +27,8 @@
 
             .letter-char {
                 width: 1em;
-                // padding-left:2px;
-                // padding-right:2px;
+                //padding-left:2px;
+                padding-right:2px;
             }
         }
         .word:after {
