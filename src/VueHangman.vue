@@ -58,7 +58,8 @@ export default {
                 .then(() => {
                     this.startGameWorking = false;
                 })
-                .catch(() => {
+                .catch((e) => {
+                    console.error("An error occurred in starting the game", e);
                     this.error = true;
                 });
         },
