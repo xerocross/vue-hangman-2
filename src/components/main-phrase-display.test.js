@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import {mount} from "@vue/test-utils";
 import MainPhraseDisplay from "./main-phrase-display.vue";
 
