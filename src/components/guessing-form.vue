@@ -67,7 +67,7 @@
 </template>
 <script>
 export default {
-    name : "GuessingForm",
+    name : "guessing-form",
     props : {
         availableLetters : {
             type : Array,
