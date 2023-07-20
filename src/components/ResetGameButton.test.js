@@ -1,5 +1,5 @@
 /* global test, expect */
-import {mount, shallowMount} from "@vue/test-utils";
+import { mount, shallowMount } from "@vue/test-utils";
 import ResetGameButton from "./reset-game-button.vue";
 
 function getComponent () {
