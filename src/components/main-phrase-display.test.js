@@ -1,4 +1,4 @@
-import {mount} from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import MainPhraseDisplay from "./main-phrase-display.vue";
 
 beforeEach(() => {

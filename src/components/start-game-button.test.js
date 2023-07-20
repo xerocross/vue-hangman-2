@@ -1,5 +1,5 @@
 /* global test, expect */
-import {mount} from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import StartGameButton from "./start-game-button.vue";
 
 test("start game button mounts", () => {
