@@ -8,4 +8,4 @@
         >
     </div>
 </template>
-<script lang = "ts" src = "./hangman-doodle.vue"></script>
+<script lang = "ts" src = "./HangmanDoodle.vue"></script>
