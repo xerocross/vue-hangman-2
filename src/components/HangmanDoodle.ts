@@ -1,18 +1,20 @@
-export default {
+import { defineComponent, PropType } from "vue";
+
+export default defineComponent({
     name : "hangman-doodle",
     props : {
         imageDirectory : {
-            type : String,
+            type : String as PropType<string>,
             required : true
         },
         completion : {
-            type : Number,
+            type : Number as PropType<number>,
             required : true
         }
     },
     computed : {
-        imageSrc () {
+        imageSrc () : string {
             return `${this.imageDirectory}/hangman-doodle${this.completion}.png`;
         }
     }
-};
+});
