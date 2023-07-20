@@ -8,14 +8,6 @@
         </button>
     </div>
 </template>
-<script>
-export default {
-    methods : {
-        reset () {
-            this.$emit("event_reset");
-        }
-    }
-};
-</script>
+<script lang = "ts" src = "./ResetGameButton.ts"></script>
 <style lang="scss">
 </style>

@@ -6,7 +6,6 @@ function getComponent () {
     return shallowMount((ResetGameButton));
 }
 
-
 test("reset-game-button mounts", () => {
     expect(() => {
         mount(ResetGameButton);
