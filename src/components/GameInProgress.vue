@@ -39,7 +39,6 @@
         />
     </div>
 </template>
-
 <script lang = "ts" src = "./GameInProgress.ts"></script>
 <style lang = "scss">
     .game-over {
