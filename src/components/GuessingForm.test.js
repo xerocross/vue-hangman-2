@@ -1,6 +1,6 @@
 /* global test, expect */
 import { shallowMount } from "@vue/test-utils";
-import GuessingForm from "./guessing-form.vue";
+import GuessingForm from "./GuessingForm.vue";
 
 test("guessing a letter emits event_guess_letter with letter payload", async () => {
     const c = shallowMount(GuessingForm,

@@ -4,7 +4,6 @@
             class="form-group"
             @submit.prevent
         >
-            <!-- <label for = "guess-letter">Guess a Letter</label> -->
             <div class="row">
                 <div class="col-6">
                     <select
