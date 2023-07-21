@@ -10,20 +10,6 @@
         </button>
     </div>
 </template>
-<script>
-export default {
-    props : {
-        working : {
-            type : Boolean,
-            default : false
-        }
-    },
-    methods : {
-        startGame () {
-            this.$emit("event_start_game");
-        }
-    }
-};
-</script>
+<script lang = "ts" src = "./StartGameButton.ts" ></script>
 <style lang = "scss">
 </style>
