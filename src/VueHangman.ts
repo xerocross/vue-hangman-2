@@ -1,7 +1,7 @@
 import { defineComponent } from "vue";
 import GameInProgress from "./components/GameInProgress.vue";
 import GameMessage from "./components/GameMessage.vue";
-import StartGameButton from "./components/start-game-button.vue";
+import StartGameButton from "./components/StartGameButton.vue";
 export default defineComponent({
     name : "vue-hangman",
     components : {
