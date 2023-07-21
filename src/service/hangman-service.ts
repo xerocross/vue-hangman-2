@@ -20,14 +20,12 @@ export interface GuessEntirePhraseResponseShape {
     }
 }
 const get = function (url : string) {
-    console.warn(`sending request to url: ${url}`);
     return new Observable((observer) => {
         fetch(url)
             .then(response => {
-                console.warn(`received:`, response);
-                if (response.ok)
+                if (response.ok) {
                     return response.json();
-                else {
+                } else {
                     observer.next({
                         status : "FAIL"
                     });
@@ -55,7 +53,6 @@ const get = function (url : string) {
 
 export default {
     getPhraseData () {
-        console.warn("we're about to throw an error");
         throw new Error("getPhraseData is deprecated");
     },
     getInitialPhrase () {
