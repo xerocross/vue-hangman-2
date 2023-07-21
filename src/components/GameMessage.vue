@@ -8,17 +8,7 @@
         </div>
     </div>
 </template>
-<script>
-export default {
-    name : "game-message",
-    props : {
-        message : {
-            type : String,
-            default : ""
-        }
-    }
-};
-</script>
+<script lang = "ts" src = "./GameMessage.ts"></script>
 <style lang = "scss">
     .game-message {
         .message {
