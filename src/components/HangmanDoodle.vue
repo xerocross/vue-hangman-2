@@ -8,5 +8,5 @@
         >
     </div>
 </template>
-<script lang = "ts" src = "./HangmanDoodle.vue"></script>
+<script lang = "ts" src = "./HangmanDoodle.ts"></script>
 <style></style>
