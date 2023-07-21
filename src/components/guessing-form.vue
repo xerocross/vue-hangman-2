@@ -65,54 +65,5 @@
         </form>
     </div>
 </template>
-<script>
-export default {
-    name : "guessing-form",
-    props : {
-        availableLetters : {
-            type : Array,
-            default : () => []
-        },
-        guessLetterWorking : {
-            type : Boolean,
-            default : false
-        },
-        guessPhraseWorking : {
-            type : Boolean,
-            default : false
-        }
-    },
-    data : () => {
-        return {
-            currentGuessPhrase : "",
-            currentGuessLetter : ""
-        };
-    },
-    computed : {
-        working () {
-            return this.guessPhraseWorking || this.guessLetterWorking;
-        }   
-    },
-    watch : {
-        availableLetters : {
-            handler (val) {
-                this.currentGuessLetter = val[0];
-            },
-            deep : true
-        }
-    },
-    methods : {
-        guess () {
-            this.$emit("event_guess_letter", this.currentGuessLetter);
-            
-        },
-        guessEntirePhrase () {
-            this.$emit("event_guess_phrase", this.currentGuessPhrase);
-            this.currentGuessPhrase = "";
-        }
-    }
-};
-</script>
-<style lang="scss">
-
-</style>
+<script lang = "ts" src = "./GuessingForm.ts"></script>
+<style lang="scss"></style>
