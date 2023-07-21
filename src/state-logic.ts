@@ -96,18 +96,16 @@ export const store = new Vuex.Store({
     },
     actions : {
         startGame ({ commit }): Promise<void> {
-            console.warn("we are in the startGame action");
             return new Promise((resolve, fail) => {
                 HangmanService.getInitialPhrase()
-                    .subscribe((val) => {
-                        console.warn("in startGame subscribe val", val);
-                        if (val.status == "SUCCESS") {
-                            const phraseLen = val.payload.data.phrase.length;
+                    .subscribe((event) => {
+                        if (event.status == "SUCCESS") {
+                            const phraseLen = event.payload.data.phrase.length;
                             commit("phraseData", {
-                                phraseNum : val.payload.data.phraseNum,
+                                phraseNum : event.payload.data.phraseNum,
                                 phraseLen : phraseLen
                             });
-                            commit("startGame", val.payload);
+                            commit("startGame", event.payload);
                             resolve();
                         } else {
                             fail();
@@ -121,15 +119,15 @@ export const store = new Vuex.Store({
             commit("guessedLetter", { letter : payload.letter });
             return new Promise((resolve, fail) => {
                 HangmanService.guessLetter(state.phraseNum.toString(), payload.letter)
-                    .subscribe((val) => {
-                        console.log("guess letter", val);
-                        if (val.status == "SUCCESS") {
-                            if (val.payload.data.success == false) {
+                    .subscribe((event) => {
+                        console.log("guess letter", event);
+                        if (event.status == "SUCCESS") {
+                            if (event.payload.data.success == false) {
                                 commit("failedAttempt");
                                 resolve(false);
                             } else {
                                 commit("mergeNewReveal", {
-                                    revealedPhrase : val.payload.data.phrase
+                                    revealedPhrase : event.payload.data.phrase
                                 });
                                 resolve(true);
                             }
@@ -143,17 +141,14 @@ export const store = new Vuex.Store({
         guessEntirePhrase ({ commit, state }, payload : GuessEntirePhraseShape) {
             return new Promise((resolve, reject) => {
                 HangmanService.guessEntirePhrase(state.phraseNum.toString(), payload.guessPhrase)
-                    .subscribe((val) => {
-                        const guessPhraseResponse = val as GuessEntirePhraseResponseShape;
-                        console.warn("after guessEntirePhrae in state-logic", val);
+                    .subscribe((event) => {
+                        const guessPhraseResponse = event as GuessEntirePhraseResponseShape;
                         if (guessPhraseResponse.status == "SUCCESS") {
                             if (guessPhraseResponse.payload.data.success == true) {
-                                console.log("true: won");
                                 commit("won");
                                 resolve(true);
                             }
                             else if (guessPhraseResponse.payload.data.success == false) {
-                                console.log("false: won");
                                 commit("failedAttempt");
                                 resolve(false);
                             }
