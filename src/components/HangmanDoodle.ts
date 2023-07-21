@@ -1,6 +1,5 @@
 import { defineComponent, PropType } from "vue";
 
-
 export default defineComponent({
     name : "hangman-doodle",
     props : {
