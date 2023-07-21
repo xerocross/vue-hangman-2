@@ -1,6 +1,7 @@
-import MainPhraseDisplay from "./MainPhraseDisplay";
-import ResetGameButton from "./ResetGameButton";
-import GuessedLetters from "./guessed-letters.vue";
+import { defineComponent } from "vue";
+import MainPhraseDisplay from "./MainPhraseDisplay.vue";
+import ResetGameButton from "./ResetGameButton.vue";
+import GuessedLetters from "./GuessedLetters.vue";
 import GuessingForm from "./guessing-form.vue";
 import HangmanDoodle from "./HangmanDoodle.vue";
 import { GuessEntirePhraseShape } from "../state-logic";
@@ -32,7 +33,7 @@ function getWord (text : string, index : number) : Word {
     return new Word(charObjects, index);
 }
 
-export default {
+export default defineComponent({
     name : "game-in-progress",
     components : {
         MainPhraseDisplay,
@@ -126,4 +127,4 @@ export default {
             this.$emit("event_push_message", message);
         }
     }
-};
+});
