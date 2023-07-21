@@ -15,7 +15,7 @@ class CharObject {
     public index;
 }
 
-class Word {
+export class Word {
     constructor (chars : CharObject[], index : number) {
         this.index = index;
         this.chars = chars;
