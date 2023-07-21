@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import MainPhraseDisplay from "./main-phrase-display.vue";
+import MainPhraseDisplay from "./MainPhraseDisplay.vue";
 
 beforeEach(() => {
     localStorage.clear();
