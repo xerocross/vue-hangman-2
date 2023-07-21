@@ -4,20 +4,7 @@
         <p>Failed Attempts: <span class="failed-attempts-num">{{ failedAttempts }}</span></p>
     </div>
 </template>
-<script>
-export default {
-    props : {
-        guessedLetters : {
-            type : Array,
-            default : () => []
-        },
-        failedAttempts : {
-            type : Number, 
-            default : 0
-        }
-    }
-};
-</script>
+<script lang = "ts" src = "./guessed-letters.ts"></script>
 <style lang="scss">
     .guessed-letters {
         font-size: 18pt;
