@@ -1,6 +1,6 @@
 /* global test, expect */
 import { mount, shallowMount } from "@vue/test-utils";
-import ResetGameButton from "./reset-game-button.vue";
+import ResetGameButton from "./ResetGameButton.vue";
 
 function getComponent () {
     return shallowMount((ResetGameButton));
