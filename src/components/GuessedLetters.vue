@@ -4,7 +4,7 @@
         <p>Failed Attempts: <span class="failed-attempts-num">{{ failedAttempts }}</span></p>
     </div>
 </template>
-<script lang = "ts" src = "./guessed-letters.ts"></script>
+<script lang = "ts" src = "./GuessedLetters.ts"></script>
 <style lang="scss">
     .guessed-letters {
         font-size: 18pt;
