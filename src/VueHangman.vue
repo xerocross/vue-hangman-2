@@ -21,62 +21,7 @@
         </div>
     </div>
 </template>
-<script>
-import GameInProgress from "./components/GameInProgress.vue";
-import GameMessage from "./components/GameMessage.vue";
-import StartGameButton from "./components/start-game-button.vue";
-export default {
-    components : {
-        GameInProgress,
-        GameMessage,
-        StartGameButton
-    },
-    props : {
-    },
-    data () {
-        return {
-            isPhraseGuessCorrect : false,
-            startGameWorking : false,
-            error : false,
-            isNewMessage : false,
-            message : ""
-        };
-    },
-    computed : {
-        isGameInProgress () {
-            return this.$store.state.gameInProgress;
-        },
-        isWon () {
-            return this.$store.state.isWon;
-        }
-    },
-    methods : {
-        startGame () {
-            let self = this;
-            self.startGameWorking = true;
-            this.$store.dispatch("startGame")
-                .then(() => {
-                    this.startGameWorking = false;
-                })
-                .catch((e) => {
-                    console.error("An error occurred in starting the game", e);
-                    this.error = true;
-                });
-        },
-        pushNewMessage (val) {
-            this.message = val;
-            this.isNewMessage = true;
-            setTimeout(() => {
-                this.isNewMessage = false;
-            }, 1000);
-        },
-        reset () {
-            this.startGame();
-        }
-    }
-
-};
-</script>
+<script lang = "ts" src = "./VueHangman.ts"></script>
 <style lang = "scss">
 .vue-hangman {
     font-size: 14pt;
