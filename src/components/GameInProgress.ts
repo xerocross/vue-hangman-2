@@ -2,7 +2,7 @@ import { defineComponent } from "vue";
 import MainPhraseDisplay from "./MainPhraseDisplay.vue";
 import ResetGameButton from "./ResetGameButton.vue";
 import GuessedLetters from "./GuessedLetters.vue";
-import GuessingForm from "./guessing-form.vue";
+import GuessingForm from "./GuessingForm.vue";
 import HangmanDoodle from "./HangmanDoodle.vue";
 import { GuessEntirePhraseShape } from "../state-logic";
 
