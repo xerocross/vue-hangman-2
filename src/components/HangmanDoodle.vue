@@ -9,3 +9,4 @@
     </div>
 </template>
 <script lang = "ts" src = "./HangmanDoodle.vue"></script>
+<style></style>
