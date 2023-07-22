@@ -1,13 +1,18 @@
-import { mount } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 import MainPhraseDisplay from "./MainPhraseDisplay.vue";
+import { CharObject, Word } from "./GameInProgress";
 
 beforeEach(() => {
     localStorage.clear();
 });
 
+test("sanity", () => {
+    expect(true).toBeTruthy();
+});
+
 test("main-phrase-display mounts", function () {
     expect(() => {
-        mount(MainPhraseDisplay);
+        shallowMount(MainPhraseDisplay);
     }).not.toThrow();
 });
 
@@ -15,28 +20,24 @@ test("main-phrase-display mounts", function () {
 test("displays a phrase", function () {
 
     function getWord (text, index) {
-        let chars = text.split("");
-        let charObjects = [];
+        const chars = text.split("");
+        const charObjects = [];
         for (let i = 0; i < chars.length; i++) {
-            charObjects.push({
-                char : chars[i],
-                index : i
-            });
+            charObjects.push(new CharObject(chars[i], i ));
         }
-        charObjects.index = index;
-        return charObjects;
+        return new Word(charObjects, index);
     }
 
     const displayWords = [
         getWord("ap", 0),
         getWord("pe", 1)
     ];
-    let mainPhraseDisplay = mount(MainPhraseDisplay, {
+    const mainPhraseDisplay = shallowMount(MainPhraseDisplay, {
         propsData : {
-            displayWords
+            displayWords : displayWords
         }
     });
-    let charSpans = mainPhraseDisplay.findAll(".letter-char");
+    const charSpans = mainPhraseDisplay.findAll(".letter-char");
 
     expect(charSpans.length).toBe(4);
     expect(charSpans.at(0).text()).toBe("a");

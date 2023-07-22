@@ -1,4 +1,3 @@
-/* global test, expect */
 import { mount } from "@vue/test-utils";
 import StartGameButton from "./StartGameButton.vue";
 

@@ -1,4 +1,3 @@
-/* global test, expect */
 import { mount, shallowMount } from "@vue/test-utils";
 import ResetGameButton from "./ResetGameButton.vue";
 
