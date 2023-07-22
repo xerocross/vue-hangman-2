@@ -7,7 +7,7 @@ the word or phrase before the little man figure is fully hanged.
 ## Updates
 
 
-### JS => TypeScript
+### July 2023 JS => TypeScript
 
 I changed the project from JavaScript to TypeScript. At the same time,
 I fixed some of the issues that still existed from the original verion 1
