@@ -4,7 +4,16 @@ This is a Vue 3-based implementation of the old children's game
 hangman. The idea is to guess letters and then ultimately guess
 the word or phrase before the little man figure is fully hanged.
 
-## Porting from Vue 2 to Vue 3
+## Updates
+
+
+### JS => TypeScript
+
+I changed the project from JavaScript to TypeScript. At the same time,
+I fixed some of the issues that still existed from the original verion 1
+of my app, which included upgrading the backend too.
+
+### May 2023 Vue 2 => Vue 3
 
 More than anything else, this app is a port of an old Vue Hangman app I wrote
 back in 2019 or so, here: https://github.com/xerocross/vue-hangman.
