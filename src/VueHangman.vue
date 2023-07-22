@@ -1,6 +1,11 @@
 <template>
     <div class="vue-hangman">
         <game-message :message = "message" />
+        <div v-if="startGameWorking">
+            <p>
+                Please note there will be a delay while Heroku spins up the backend.
+            </p>
+        </div>
         <div
             v-if="isWon"
             class="alert alert-info"
