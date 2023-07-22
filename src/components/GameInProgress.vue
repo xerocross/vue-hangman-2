@@ -10,7 +10,7 @@
         <div class="row">
             <div 
                 v-if = "!isLost" 
-                class = "col-6"
+                class = "col-md-6"
             >
                 <guessing-form 
                     :available-letters = "availableLetters"
@@ -25,7 +25,7 @@
                 />
             </div>
             <div 
-                :class="!isLost ? 'col-6' : 'lost'"
+                :class="!isLost ? 'col-md-6' : 'lost'"
             >
                 <hangman-doodle 
                     class = "hangman-doodle-outer small"
