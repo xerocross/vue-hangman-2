@@ -6,7 +6,7 @@ import GuessingForm from "./GuessingForm.vue";
 import HangmanDoodle from "./HangmanDoodle.vue";
 import { GuessEntirePhraseShape } from "../state-logic";
 
-class CharObject {
+export class CharObject {
     constructor (charString : string, index : number) {
         this.charString = charString;
         this.index = index;
