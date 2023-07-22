@@ -43,9 +43,8 @@
         >
             <!-- <label for="guessPhrase">Guess Entire Phrase</label> -->
             <div class="row">
-                <p><label for = "guessPhrase">Guess the Phrase</label>
-                </p>
                 <div class="col-6">
+                    <p><label for = "guessPhrase">Guess the Phrase</label></p>
                     <input
                         v-model="currentGuessPhrase"
                         v-AsyncWorking="guessPhraseWorking"
