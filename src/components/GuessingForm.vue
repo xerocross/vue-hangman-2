@@ -6,7 +6,8 @@
         >
             <div class="row">
                 <div class="col-6">
-                    <select
+                    <p><label for = "guess-letter">Guess a Letter</label></p>
+                    <p><select
                         v-model="currentGuessLetter"
                         name = "guess-letter"
                         class="form-control guess-letter-select"
@@ -20,6 +21,7 @@
                             {{ i }}
                         </option>
                     </select>
+                    </p>
                 </div>
                 <div class="col-6">
                     <button
@@ -29,7 +31,7 @@
                         :disabled="currentGuessLetter == '' || working"
                         @click="guess"
                     >
-                        guess letter
+                        guess
                     </button>
                 </div>
             </div>
@@ -41,6 +43,8 @@
         >
             <!-- <label for="guessPhrase">Guess Entire Phrase</label> -->
             <div class="row">
+                <p><label for = "guessPhrase">Guess the Phrase</label>
+                </p>
                 <div class="col-6">
                     <input
                         v-model="currentGuessPhrase"
@@ -57,7 +61,7 @@
                         :disabled="working"
                         @click="guessEntirePhrase"
                     >
-                        guess phrase
+                        guess
                     </button>
                 </div>
             </div>
