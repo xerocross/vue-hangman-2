@@ -3,7 +3,7 @@
   "version": "3.0.1",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -20,34 +20,28 @@
     "vue": "^3.3.2",
     "vuex": "^4.1.0"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "vue"
-    ],
-    "transform": {
-      "^.+\\.vue$": "vue-jest",
-      "^.+\\.jsx?$": "babel-jest"
-    }
-  },
   "devDependencies": {
-    "@babel/preset-env": "^7.22.4",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
     "@rushstack/eslint-patch": "^1.2.0",
+    "@types/jest": "^29.5.3",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vue/compiler-sfc": "^3.3.4",
     "@vue/eslint-config-prettier": "^7.1.0",
-    "@vue/test-utils": "^2.4.0-alpha.1",
+    "@vue/test-utils": "^2.4.1",
+    "@vue/vue3-jest": "^29.2.4",
+    "babel-jest": "^29.6.1",
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
-    "jest": "^26.6.3",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1",
     "sass": "^1.62.1",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.1.6",
     "vite": "^4.3.5",
-    "vue-jest": "^5.0.0-alpha.10",
     "vue-ts": "^1.0.11"
   }
 }
