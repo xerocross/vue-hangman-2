@@ -1,6 +1,5 @@
 
 import VueHangman from "./VueHangman.vue";
-
 import { store } from "./state-logic";
 import { createApp } from "vue";
 import AsyncWorking from "./AsyncWorking";
